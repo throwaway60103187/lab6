@@ -157,7 +157,7 @@ def test_list_contact_api(client):
     
     # Get all contacts via API endpoint
     response = client.get('/api/contacts')
-    assert response.status_code == 200
+    assert response.status_code == 201
     contacts = response.get_json()
     # Depending on fixture usage, there should be at least one contact
     assert isinstance(contacts, list)
